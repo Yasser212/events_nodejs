@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an event</title>
+</head>
+
+<body>
+    <h1>Create an event</h1>
+
+    <form action="/events" method="POST">
+        <p>
+            <label for="title">Title</label><br>
+            <input id="title" name="title" type="text" maxlength="200" required>
+        </p>
+
+        <p>
+            <label for="description">Description</label><br>
+            <textarea id="description" name="description"></textarea>
+        </p>
+
+        <p>
+            <label for="location">Location</label><br>
+            <input id="location" name="location" type="text" maxlength="255">
+        </p>
+
+        <p>
+            <label for="starts_at">Date and time</label><br>
+            <input id="starts_at" name="starts_at" type="datetime-local" required>
+        </p>
+
+        <button type="submit">Create event</button>
+    </form>
+
+    <a href="/events">Back to events</a>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1>Upcoming events</h1>
+
+    <a href="/events/new">Create an event</a>
+
+    <% if (events.length===0) { %>
+        <p>No events yet.</p>
+        <% } %>
+
+            <% events.forEach((event)=> { %>
+                <article>
+                    <h2>
+                        <%= event.title %>
+                    </h2>
+                    <p>
+                        <%= event.description %>
+                    </p>
+                    <p>Location: <%= event.location %>
+                    </p>
+                    <p>Date: <%= event.starts_at %>
+                    </p>
+                </article>
+                <% }); %>
+</body>
+
+</html>
